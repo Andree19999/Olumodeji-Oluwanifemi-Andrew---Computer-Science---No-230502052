@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawford Student Application Form</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://th.bing.com/th?id=OIP.MAfmKZH7F13YvlFHJTE4BwHaEU&w=327&h=190&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2.jpeg');
+            background-size: cover;   
+            background-position: center;                  
+            }
+
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 0px 0px 10px cyan,
+                         0px 0px 20px cyan,
+                         0px 0px 40px cyan,
+                         0px 0px 80px cyan;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input:is(:focus) {
+            border: 2px solid transparent;
+            transition: all 0.1s ease;
+            background: linear-gradient(rgb(14, 251, 251), white)
+            padding-box,
+                linear-gradient(45deg, blue, red) border-box;
+        }
+
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: 2px Solid var(--icon, var(--submit));
+            border-radius: 1px 1px 4px 4px;
+            cursor: pointer;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+            .container
+        {
+            border: 2px solid white;
+            backdrop-filter: blur(20px);
+        }
+        }
+        button:hover {
+            background-color: green;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crawford Student Application Form</h1>
+    <form action="/submit-form" method="post">
+        <fieldset>
+            <legend>Student's Personal Information</legend>
+            
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female"> Female
+            </label>
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other"> I'd rather not say
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Program of Choice</legend>
+            <label for="program">Choose a program:</label>
+            <select id="program" name="program" required>
+                <option value="" disabled selected>Select a program</option>
+                <option value="Computerscience">Computer Science</option>
+                <option value="masscommunication">Mass Communication</option>
+                <option value="businesaddmininstration">Business Administration</option>
+                <option value="finance">Finances</option>
+                <option value="informationandcommunicationtechnology">ICT</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Student Skills and Extra-curriculars</legend>
+            <label for="sports">
+                <input type="checkbox" id="sports" name="skills" value="Sports"> Sports
+            </label>
+            <label for="music">
+                <input type="checkbox" id="music" name="skills" value="Music"> Music and Arts
+            </label>
+            <label for="Volunteering">
+                <input type="checkbox" id="volunteering" name="skills" value="Volunteering"> Volunteering
+            </label>
+            <label for="programming">
+                <input type="checkbox" id="programming" name="skills" value="Programming"> Computer Programming
+            </label>
+            <label for="debate">
+                <input type="checkbox" id="debate" name="skills" value="Debate"> Public Speaking and Debates
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Submit Your Application</legend>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
